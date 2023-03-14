@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>AR.js A-Frame Location-based</title>
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
-<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+  <title>AR.js A-Frame Location-based</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script type='text/javascript'
+    src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+  <script type='text/javascript'
+    src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script>
+    window.onload = function () {
+      document
+        .querySelector(".say-hi-button")
+        .addEventListener("click", function () {
+          // here you can change also a-scene or a-entity properties, like
+          // changing your 3D model source, size, position and so on
+          // or you can just open links, trigger actions...
+          //   alert("Hi there!");
+          window.location.href = 'index.html';
+        });
+    };
+  </script> -->
 </head>
+
 <body>
-<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Página AR</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- <div class="buttons">
+    <button class="say-hi-button">SAY HI!</button>
+  </div> -->
+  <a-scene class="containerAR" vr-mode-ui='enabled: false'
+    arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
     <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
-    <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: -16.503002916288445; longitude: -68.14712127851742" scale="10 10 10"></a-entity>
-</a-scene>
+    <a-entity material='color: red' geometry='primitive: box'
+      gps-new-entity-place="latitude: -16.503002916288445; longitude: -68.14712127851742" scale="10 10 10"></a-entity>
+    <!-- <a href="./index.html">
+        <button>Volver al menú principal</button>
+      </a> -->
+  </a-scene>
+  <button class="button1" onclick="volverAtras()"> esto es un boton 1
+</button>
+  <script src="botones.js"></script>
 </body>
+
 </html>
 
 <!-- -16.5031135,-68.1472688
